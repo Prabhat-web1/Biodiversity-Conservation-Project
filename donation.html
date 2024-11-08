@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Biodiversity Conservation</title>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #2196F3;
+            --text-color: #333;
+            --background-color: #f4f4f4;
+            --header-height: 80px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            height: var(--header-height);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        main {
+            padding-top: var(--header-height);
+            min-height: calc(100vh - var(--header-height));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .donation-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .donation-options {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .donation-option {
+            background-color: #f0f0f0;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .donation-option:hover, .donation-option.selected {
+            background-color: var(--primary-color);
+            color: #fff;
+            border-color: var(--primary-color);
+        }
+
+        .custom-amount {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .custom-amount input {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .donation-frequency {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .frequency-option {
+            background-color: #f0f0f0;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 0 10px;
+        }
+
+        .frequency-option:hover, .frequency-option.selected {
+            background-color: var(--secondary-color);
+            color: #fff;
+            border-color: var(--secondary-color);
+        }
+
+        .donate-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .donate-button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .donation-options, .donation-frequency {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .donation-option, .frequency-option {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://img.freepik.com/free-vector/world-wildlife-conservation-day-poster-template_1308-120050.jpg" alt="Biodiversity Conservation Logo">
+                <h1>Biodiversity Conservation</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="threats.html">Threats</a></li>
+                <li><a href="conservation.html">Conservation</a></li>
+                <li><a href="action.html">Take Action</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="donation-container">
+            <h2>Support Biodiversity Conservation</h2>
+            <div class="donation-options">
+                <div class="donation-option" data-amount="10">$10</div>
+                <div class="donation-option" data-amount="25">$25</div>
+                <div class="donation-option" data-amount="50">$50</div>
+                <div class="donation-option" data-amount="100">$100</div>
+            </div>
+            <div class="custom-amount">
+                <input type="number" id="custom-amount" placeholder="Enter custom amount">
+            </div>
+            <div class="donation-frequency">
+                <div class="frequency-option" data-frequency="once">One-time</div>
+                <div class="frequency-option" data-frequency="monthly">Monthly</div>
+            </div>
+            <button class="donate-button">Donate Now</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Biodiversity Conservation. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const donationOptions = document.querySelectorAll('.donation-option');
+            const customAmountInput = document.getElementById('custom-amount');
+            const frequencyOptions = document.querySelectorAll('.frequency-option');
+            const donateButton = document.querySelector('.donate-button');
+
+            let selectedAmount = null;
+            let selectedFrequency = 'once';
+
+            donationOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    donationOptions.forEach(opt => opt.classList.remove('selected'));
+                    this.classList.add('selected');
+                    selectedAmount = this.dataset.amount;
+                    customAmountInput.value = '';
+                    updateDonateButton();
+                });
+            });
+
+            customAmountInput.addEventListener('input', function() {
+                donationOptions.forEach(opt => opt.classList.remove('selected'));
+                selectedAmount = this.value;
+                updateDonateButton();
+            });
+
+            frequencyOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    frequencyOptions.forEach(opt => opt.classList.remove('selected'));
+                    this.classList.add('selected');
+                    selectedFrequency = this.dataset.frequency;
+                    updateDonateButton();
+                });
+            });
+
+            function updateDonateButton() {
+                const amount = selectedAmount || customAmountInput.value;
+                if (amount) {
+                    donateButton.textContent = Donate $${amount} ${selectedFrequency === 'monthly' ? 'Monthly' : ''};
+                    donateButton.disabled = false;
+                } else {
+                    donateButton.textContent = 'Donate Now';
+                    donateButton.disabled = true;
+                }
+            }
+
+            donateButton.addEventListener('click', function() {
+                const amount = selectedAmount || customAmountInput.value;
+                if (amount) {
+                    alert(Thank you for your $${selectedFrequency === 'monthly' ? 'monthly' : 'one-time'} donation of $${amount}!);
+                    // Here you would typically integrate with a payment processor
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Biodiversity Conservation Initiative</title>
+    <link rel="stylesheet" href="">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <style>
+        :root {
+    --primary-color: #4CAF50;
+    --secondary-color: #2196F3;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+    --header-height: 80px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: var(--header-height);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary-color);
+}
+
+main {
+    padding-top: var(--header-height);
+}
+
+.hero {
+    background-image: url('poster.jpg');
+    
+    background-position: center;
+    height:440px;
+    display:flex;
+    width:500px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 10 20px;
+    background-size:cover;
+
+
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+section {
+    padding: 60px 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.infographic {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.infographic img {
+    max-width: 100%;
+    height: auto;
+}
+
+.stats-grid, .approach-grid, .goals-grid, .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.stat-card, .approach-card, .goal-card, .team-member {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover, .approach-card:hover, .goal-card:hover, .team-member:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card i, .approach-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.stat-card h3, .approach-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.mission-vision {
+    background-color: #e8f5e9;
+}
+
+.mission, .vision {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mission h2, .vision h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.cta {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+}
+
+.cta h2 {
+    color: #fff;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #fff;
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #555;
+}
+
+.footer-bottom a {
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .stats-grid, .approach-grid, .goals-grid, .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://img.freepik.com/free-vector/world-wildlife-conservation-day-poster-template_1308-120050.jpg" alt="Biodiversity Conservation Logo">
+                <h1>Biodiversity Conservation Initiative</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="Projects.html">Projects</a></li>
+                <li><a href="volunteer.html">Get Involved</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>About Us</h1>
+            
+        </section>
+
+        <section class="intro">
+            <div class="container">
+                <h2>What is Biodiversity?</h2>
+                <p>Biodiversity is the variety of life on Earth, from the smallest insect to the largest whale. It forms the foundation of ecosystems that provide essential services—clean water, air, food, and medicine. Without biodiversity, life as we know it would not exist.</p>
+                <div class="infographic">
+                    <img src="https://international-partnerships.ec.europa.eu/sites/default/files/styles/oe_theme_medium_no_crop/public/2021-06/edd2021-biodiversity-hlg-recommendations.png?itok=YR3jLdtC" alt="Biodiversity Infographic">
+                </div>
+            </div>
+        </section>
+
+        <section class="biodiversity-state">
+            <div class="container">
+                <h2>The State of Global Biodiversity</h2>
+                <p>Biodiversity around the world is in crisis. An estimated one million species are at risk of extinction due to habitat destruction, climate change, pollution, and overexploitation. If we do not act, the future of biodiversity—and our planet—is at stake.</p>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <i class="fas fa-skull"></i>
+                        <h3>1 Million</h3>
+                        <p>Species at risk of extinction</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-tree"></i>
+                        <h3>80%</h3>
+                        <p>of land-based species live in forests</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-water"></i>
+                        <h3>50%</h3>
+                        <p>of marine species at risk</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mission-vision">
+            <div class="container">
+                <div class="mission">
+                    <h2>Our Mission</h2>
+                    <p>Our mission is to protect, restore, and promote the conservation of biodiversity globally. Through education, advocacy, and action, we aim to inspire individuals and communities to take meaningful steps toward preserving life on Earth.</p>
+                </div>
+                <div class="vision">
+                    <h2>Our Vision</h2>
+                    <p>We envision a future where biodiversity thrives, ecosystems are protected, and humans coexist harmoniously with nature, ensuring a sustainable and resilient planet for generations to come.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="approach">
+            <div class="container">
+                <h2>Our Approach to Biodiversity Conservation</h2>
+                <div class="approach-grid">
+                    <div class="approach-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Education & Awareness</h3>
+                        <p>We use this platform to share information, research, and tools that empower individuals and communities to protect the natural world.</p>
+                    </div>
+                    <div class="approach-card">
+                        <i class="fas fa-bullhorn"></i>
+                        <h3>Advocacy & Policy</h3>
+                        <p>We work with governments, NGOs, and global organizations to advocate for stronger environmental policies that protect ecosystems and species at risk.</p>
+                    </div>
+                    <div class="approach-card">
+                        <i class="fas fa-hands-helping"></i>
+                        <h3>On-the-Ground Action</h3>
+                        <p>From restoring vital habitats like coral reefs and rainforests to protecting endangered species through anti-poaching efforts, we take real, tangible actions to conserve biodiversity.</p>
+                    </div>
+                    <div class="approach-card">
+                        <i class="fas fa-microscope"></i>
+                        <h3>Research & Innovation</h3>
+                        <p>We support and conduct research to better understand biodiversity and develop innovative conservation strategies.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="goals">
+            <div class="container">
+                <h2>Our Goals</h2>
+                <div class="goals-grid">
+                    <div class="goal-card">
+                        <h3>Short-Term Goals</h3>
+                        <ul>
+                            
+                            <li>Plant 10,000 trees to support local wildlife</li>
+                            <li>Educate people on reducing plastic waste</li>
+                        </ul>
+                    </div>
+                    <div class="goal-card">
+                        <h3>Long-Term Goals</h3>
+                        <ul>
+                            <li>Protect 30% of Earth's land and oceans by 2030</li>
+                            <li>Restore critical habitats worldwide</li>
+                            <li>Establish sustainable conservation practices globally</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <h2>Why We Need Your Help</h2>
+                <p>Every action counts. By donating to our cause, volunteering your time, or simply spreading awareness, you are helping protect the biodiversity that sustains life on Earth. Together, we can make a real impact.</p>
+                <a href="#" class="cta-button">Get Involved</a>
+            </div>
+        </section>
+
+        <section class="team">
+            <div class="container">
+                <h2>Our Team</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="prabhat.jpeg" alt="Prabhat Nanda">
+                        <h3>Prabhat Nanda</h3>
+                        <p>Executive Director </p>
+                    </div>
+                    <div class="team-member">
+                        <img src="/placeholder.svg?height=200&width=200" alt="Jagriti Das">
+                        <h3>Jagriti Das</h3>
+                        <p>Conservation asst Director </p>
+                    </div>
+                    <div class="team-member">
+                        <img src="" alt="Sourav Kumar">
+                        <h3>Sourav Kumar</h3>
+                        <p>Community Outreach Manager</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>We are dedicated to preserving Earth's biodiversity through education, research, and action.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Get Involved</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@biodiversityconservation.org</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Biodiversity Conservation Initiative. All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Add animation to cards on scroll
+    const cards = document.querySelectorAll('.stat-card, .approach-card, .goal-card, .team-member');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.1 });
+
+    cards.forEach(card => {
+        card.style.opacity = 0;
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        observer.observe(card);
+    });
+
+    // Responsive navigation menu
+    const navToggle = document.createElement('button');
+    navToggle.classList.add('nav-toggle');
+    navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+    document.querySelector('nav').appendChild(navToggle);
+
+    navToggle.addEventListener('click', () => {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('show');
+    });
+});
+    </script>
+</body>
+</html>

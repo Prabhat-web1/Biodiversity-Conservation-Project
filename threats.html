@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Threats to Biodiversity - Biodiversity Conservation Initiative</title>
+    <link rel="stylesheet" href="">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <style>
+        :root {
+    --primary-color: #4CAF50;
+    --secondary-color: #2196F3;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+    --header-height: 80px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: var(--header-height);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary-color);
+}
+
+main {
+    padding-top: var(--header-height);
+}
+
+.hero {
+    background-image: url('https://www.un.org/sites/un2.un.org/files/en_mammals_unfcc.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+section {
+    padding: 60px 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.threat-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.threat-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.threat-card h3 {
+    font-size: 1.5rem;
+    padding: 20px 20px 10px;
+    color: var(--primary-color);
+}
+
+.threat-card p, .threat-card h4, .threat-card ul {
+    padding: 0 20px;
+    margin-bottom: 15px;
+}
+
+.threat-card ul {
+    padding-left: 40px;
+}
+
+.conclusion {
+    background-color: #e8f5e9;
+    text-align: center;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #45a049;
+}
+
+.resources ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resources li {
+    margin-bottom: 10px;
+}
+
+.resources a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.resources a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #555;
+}
+
+.footer-bottom a {
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .threat-card img {
+        height: 200px;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://img.freepik.com/free-vector/world-wildlife-conservation-day-poster-template_1308-120050.jpg" alt="Biodiversity Conservation Logo">
+                <h1>Biodiversity Conservation Initiative</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="threats.html" class="active">Threats</a></li>
+                <li><a href="#">Get Involved</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Threats to Biodiversity</h1>
+            <p>Understanding the Challenges Facing Our Planet's Ecosystems</p>
+        </section>
+
+        <section class="intro">
+            <div class="container">
+                <p>Biodiversity, the variety of life on Earth, is crucial to the health of ecosystems and the well-being of all species, including humans. Unfortunately, biodiversity is under threat from a variety of human-induced and natural factors. These threats are pushing many species to the brink of extinction, altering ecosystems, and destabilizing our planet's life-support systems.</p>
+                <p>On this page, we will explore the major threats to biodiversity and their impacts on the environment. Understanding these threats is the first step in developing solutions and taking action to protect our planet's precious biodiversity.</p>
+            </div>
+        </section>
+
+        <section class="threats">
+            <div class="container">
+                <h2>Major Threats to Biodiversity</h2>
+                
+                <div class="threat-card">
+                    <img src="https://www.germanwatch.org/sites/default/files/styles/gw_1200_x/public/fig._3._deforestation_in_the_amazon_drone_aerial_view_of_deforestation_in_the_amazon_rainforest.jpg?itok" alt="Deforestation in the Amazon">
+                    <h3>1. Habitat Destruction and Fragmentation</h3>
+                    <p>Human activities like urbanization, agriculture, and infrastructure development lead to the destruction of natural habitats and the fragmentation of ecosystems.</p>
+                    <h4>Key Impacts:</h4>
+                    <ul>
+                        <li>Loss of biodiversity</li>
+                        <li>Reduced connectivity between ecosystems</li>
+                        <li>Disruption of ecosystem services</li>
+                    </ul>
+                    <p><strong>Example:</strong> Deforestation in the Amazon rainforest for agriculture and urban expansion.</p>
+                </div>
+
+                <div class="threat-card">
+                    <img src="https://www.wildhope.tv/wp-content/uploads/2024/01/Coral-Bleach-2_Sequence-01.00_01_24_05.Still009-scaled.jpg" alt="Coral bleaching due to climate change">
+                    <h3>2. Climate Change</h3>
+                    <p>Rising temperatures, changing precipitation patterns, and extreme weather events are altering ecosystems and habitats worldwide.</p>
+                    <h4>Key Impacts:</h4>
+                    <ul>
+                        <li>Shifts in species distributions</li>
+                        <li>Ocean acidification and coral bleaching</li>
+                        <li>Destruction of habitats (e.g., melting ice caps)</li>
+                    </ul>
+                    <p><strong>Example:</strong> Coral reefs affected by rising ocean temperatures, leading to widespread bleaching events.</p>
+                </div>
+
+                <div class="threat-card">
+                    <img src="https://www.texasdisposal.com/wp-content/uploads/2020/08/shutterstock_134828306.jpg" alt="Plastic pollution in oceans">
+                    <h3>3. Pollution</h3>
+                    <p>Chemical, plastic, noise, and light pollution contaminate ecosystems, harm species, and disrupt ecological balance.</p>
+                    <h4>Key Impacts:</h4>
+                    <ul>
+                        <li>Toxicity to plants, animals, and humans</li>
+                        <li>Accumulation of pollutants in the food chain</li>
+                        <li>Disruption of wildlife behavior</li>
+                    </ul>
+                    <p><strong>Example:</strong> Plastic pollution in oceans affecting marine life through entanglement and ingestion.</p>
+                </div>
+
+                <div class="threat-card">
+                    <img src="/placeholder.svg?height=300&width=400" alt="Overfishing">
+                    <h3>4. Overexploitation</h3>
+                    <p>Unsustainable use of natural resources, including hunting, fishing, logging, and the wildlife trade.</p>
+                    <h4>Key Impacts:</h4>
+                    <ul>
+                        <li>Species population decline and extinction</li>
+                        <li>Disruption of ecological balance</li>
+                        <li>Loss of genetic diversity</li>
+                    </ul>
+                    <p><strong>Example:</strong> Overfishing of cod and other fish species, leading to population collapse.</p>
+                </div>
+
+                <div class="threat-card">
+                    <img src="/placeholder.svg?height=300&width=400" alt="Invasive species - Zebra mussels">
+                    <h3>5. Invasive Species</h3>
+                    <p>Non-native species introduced to new environments can disrupt local ecosystems and outcompete or prey on native species.</p>
+                    <h4>Key Impacts:</h4>
+                    <ul>
+                        <li>Loss of native species and biodiversity</li>
+                        <li>Alteration of ecosystem dynamics</li>
+                        <li>Economic losses in agriculture and fisheries</li>
+                    </ul>
+                    <p><strong>Example:</strong> The zebra mussel invasion in the Great Lakes, outcompeting native species.</p>
+                </div>
+
+                <div class="threat-card">
+                    <img src="/placeholder.svg?height=300&width=400" alt="Agricultural expansion">
+                    <h3>6. Land Use Change and Agricultural Expansion</h3>
+                    <p>Conversion of natural habitats into agricultural land, leading to loss of biodiversity and ecosystem services.</p>
+                    <h4>Key Impacts:</h4>
+                    <ul>
+                        <li>Loss of native habitats and species</li>
+                        <li>Soil degradation and erosion</li>
+                        <li>Increased use of pesticides and fertilizers</li>
+                    </ul>
+                    <p><strong>Example:</strong> Deforestation for palm oil plantations in Southeast Asia.</p>
+                </div>
+
+                <div class="threat-card">
+                    <img src="/placeholder.svg?height=300&width=400" alt="Deforestation">
+                    <h3>7. Deforestation</h3>
+                    <p>Large-scale removal of forests for timber, agriculture, mining, and urban expansion.</p>
+                    <h4>Key Impacts:</h4>
+                    <ul>
+                        <li>Habitat loss for countless species</li>
+                        <li>Contribution to climate change</li>
+                        <li>Disruption of water cycles</li>
+                    </ul>
+                    <p><strong>Example:</strong> Illegal logging in tropical rainforests, destroying habitats for numerous species.</p>
+                </div>
+
+                <div class="threat-card">
+                    <img src="/placeholder.svg?height=300&width=400" alt="Chytrid fungus affecting amphibians">
+                    <h3>8. Disease</h3>
+                    <p>Diseases, both natural and introduced by humans, can have devastating effects on wildlife populations.</p>
+                    <h4>Key Impacts:</h4>
+                    <ul>
+                        <li>Population decline in vulnerable species</li>
+                        <li>Potential for disease to spread across ecosystems</li>
+                        <li>Disruption of food webs</li>
+                    </ul>
+                    <p><strong>Example:</strong> Chytridiomycosis decimating amphibian populations worldwide.</p>
+                </div>
+
+                <div class="threat-card">
+                    <img src="/placeholder.svg?height=300&width=400" alt="Ocean acidification effects on coral">
+                    <h3>9. Ocean Acidification</h3>
+                    <p>Increased absorption of CO2 by oceans leads to more acidic waters, threatening marine ecosystems.</p>
+                    <h4>Key Impacts:</h4>
+                    <ul>
+                        <li>Loss of coral reefs</li>
+                        <li>Impact on marine food webs</li>
+                        <li>Decline in shellfish populations</li>
+                    </ul>
+                    <p><strong>Example:</strong> Declining shellfish populations due to difficulty forming shells in acidic waters.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="conclusion">
+            <div class="container">
+                <h2>Taking Action Against Biodiversity Loss</h2>
+                <p>The threats to biodiversity are numerous and complex, but with collective action, we can make a difference. By understanding these challenges, we can work together to develop solutions and protect our planet's precious ecosystems.</p>
+                <a href="#" class="cta-button">Get Involved in Conservation</a>
+            </div>
+        </section>
+
+        <section class="resources">
+            <div class="container">
+                <h2>Further Reading and Resources</h2>
+                <ul>
+                    <li><a href="#">IUCN Red List of Threatened Species</a></li>
+                    <li><a href="#">WWF Living Planet Report</a></li>
+                    <li><a href="#">UN Convention on Biological Diversity</a></li>
+                    <li><a href="#">National Geographic: Biodiversity</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>We are dedicated to preserving Earth's biodiversity through education, research, and action.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="threats.html">Threats</a></li>
+                    <li><a href="#">Get Involved</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@biodiversityconservation.org</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Biodiversity Conservation Initiative. All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Add animation to threat cards on scroll
+    const cards = document.querySelectorAll('.threat-card');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.1 });
+
+    cards.forEach(card => {
+        card.style.opacity = 0;
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        observer.observe(card);
+    });
+
+    // Responsive navigation menu
+    const navToggle = document.createElement('button');
+    navToggle.classList.add('nav-toggle');
+    navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+    document.querySelector('nav').appendChild(navToggle);
+
+    navToggle.addEventListener('click', () => {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('show');
+    });
+
+    // Add hover effect to threat cards
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-5px)';
+            card.style.boxShadow = '0 6px 12px rgba(0,0,0,0.15)';
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0)';
+            card.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+        });
+    });
+});
+    </script>
+</body>
+</html>

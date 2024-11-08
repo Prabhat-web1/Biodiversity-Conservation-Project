@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects - Biodiversity Conservation Initiative</title>
+    <link rel="stylesheet" href="">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <style>
+        :root {
+    --primary-color: #4CAF50;
+    --secondary-color: #2196F3;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+    --header-height: 80px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: var(--header-height);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary-color);
+}
+
+main {
+    padding-top: var(--header-height);
+}
+
+.hero {
+    background-image: url('https://st.adda247.com/https://www.studyiq.com/articles/wp-content/uploads/2023/09/14003445/Biodiversity-its-Levels-Extent-and-Significance-1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+section {
+    padding: 60px 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.project-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.project-card {
+    flex: 0 0 auto;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    scroll-snap-align: start;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #45a049;
+}
+
+.project-grid, .impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.project-item, .impact-item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.project-item h3, .impact-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.learn-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.impact-item {
+    text-align: center;
+}
+
+.impact-item i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.involvement-options {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.option {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.social-share {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-share a {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.testimonial {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.testimonial cite {
+    font-weight: bold;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #555;
+}
+
+.footer-bottom a {
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .involvement-options {
+        flex-direction: column;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://img.freepik.com/free-vector/world-wildlife-conservation-day-poster-template_1308-120050.jpg" alt="Biodiversity Conservation Logo">
+                <h1>Biodiversity Conservation Initiative</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="#">Get Involved</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Our Projects</h1>
+            
+           
+            </div>
+        </section>
+
+        <section class="intro">
+            <div class="container">
+                <p>At Biodiversity Conservation Initiative, we are committed to protecting the planet's biodiversity through a series of innovative and impactful projects. Our work spans across ecosystems, species conservation, community engagement, and policy advocacy. These projects reflect our dedication to creating a sustainable, biodiverse world for future generations.</p>
+                <p>Explore our key projects below to learn about our ongoing efforts, the progress we're making, and how you can contribute to these vital initiatives.</p>
+            </div>
+        </section>
+
+        <section class="featured-projects">
+            <div class="container">
+                <h2>Featured Projects</h2>
+                <div class="project-carousel">
+                    <div class="project-card">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Coral Reef Restoration">
+                        <h3>Coral Reef Restoration Initiative</h3>
+                        <p>Location: Indian Ocean, Mauritius</p>
+                        <p>Objective: Restore 200 hectares of coral reefs by 2025</p>
+                        <p>Status: Successfully restored 50 hectares in the first year</p>
+                        <a href="#" class="cta-button">Support This Project</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Amazon Rainforest Protection">
+                        <h3>Amazon Rainforest Protection</h3>
+                        <p>Location: Brazil, Peru, Colombia</p>
+                        <p>Objective: Protect 1 million acres of rainforest by 2030</p>
+                        <p>Status: 250,000 acres protected, 100,000 trees planted</p>
+                        <a href="#" class="cta-button">Get Involved</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="/placeholder.svg?height=300&width=400" alt="African Elephant Conservation">
+                        <h3>African Elephant Conservation</h3>
+                        <p>Location: Kenya, Tanzania, Uganda</p>
+                        <p>Objective: Increase elephant population by 20% by 2028</p>
+                        <p>Status: 10% increase achieved, anti-poaching efforts ongoing</p>
+                        <a href="#" class="cta-button">Donate Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ongoing-projects">
+            <div class="container">
+                <h2>Ongoing and Past Projects</h2>
+                <div class="project-grid">
+                    <div class="project-item">
+                        <h3>Tigers of the Himalayas</h3>
+                        <p>Location: Nepal</p>
+                        <p>Protecting the endangered Bengal tiger through habitat restoration and anti-poaching efforts.</p>
+                        <a href="#" class="learn-more">Learn More</a>
+                    </div>
+                    <div class="project-item">
+                        <h3>Great Barrier Reef Resilience</h3>
+                        <p>Location: Australia</p>
+                        <p>Enhancing the resilience of the Great Barrier Reef through innovative conservation techniques.</p>
+                        <a href="#" class="learn-more">Learn More</a>
+                    </div>
+                    <div class="project-item">
+                        <h3>Arctic Sea Ice Conservation</h3>
+                        <p>Location: Arctic Circle</p>
+                        <p>Monitoring and protecting Arctic sea ice to preserve habitats for polar species.</p>
+                        <a href="#" class="learn-more">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="collaborative-projects">
+            <div class="container">
+                <h2>Government & NGO-Led Projects</h2>
+                <div class="project-list">
+                    <div class="project-item">
+                        <h3>Global Coral Reef Protection Project</h3>
+                        <p>Lead Organizations: UNEP, WWF</p>
+                        <p>Scope: Global (Caribbean and Pacific)</p>
+                        <p>Progress: 30% increase in coral coverage in priority areas</p>
+                    </div>
+                    <div class="project-item">
+                        <h3>European Biodiversity Strategy 2030</h3>
+                        <p>Lead Organization: European Union</p>
+                        <p>Scope: European Union Member States</p>
+                        <p>Progress: Creation of Nature Restoration Law, expansion of protected areas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="impact">
+            <div class="container">
+                <h2>Our Impact</h2>
+                <div class="impact-grid">
+                    <div class="impact-item">
+                        <i class="fas fa-tree"></i>
+                        <h3>10,000+</h3>
+                        <p>Trees Planted</p>
+                    </div>
+                    <div class="impact-item">
+                        <i class="fas fa-fish"></i>
+                        <h3>200+</h3>
+                        <p>Species Protected</p>
+                    </div>
+                    <div class="impact-item">
+                        <i class="fas fa-users"></i>
+                        <h3>3,000+</h3>
+                        <p>People Trained in Sustainable Practices</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="get-involved">
+            <div class="container">
+                <h2>Get Involved</h2>
+                <div class="involvement-options">
+                    <div class="option">
+                        <h3>Volunteer</h3>
+                        <p>Join us in our efforts to restore ecosystems and protect wildlife.</p>
+                        <a href="#" class="cta-button">Sign Up to Volunteer</a>
+                    </div>
+                    <div class="option">
+                        <h3>Donate</h3>
+                        <p>Your contribution helps fund critical conservation projects.</p>
+                        <a href="#" class="cta-button">Donate Now</a>
+                    </div>
+                    <div class="option">
+                        <h3>Spread the Word</h3>
+                        <p>Share our mission with your network and help raise awareness.</p>
+                        <div class="social-share">
+                            <a href="#" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" aria-label="Share on Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Share on Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2>Success Stories</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial">
+                        <p>"Thanks to the tree planting initiative, our village now has cleaner air, more wildlife, and better agricultural yields."</p>
+                        <cite>- Local farmer in the Amazon region</cite>
+                    </div>
+                    <div class="testimonial">
+                        <p>"This partnership has played a crucial role in preserving the Amazon's biodiversity."</p>
+                        <cite>- Dr. Jane Doe, Conservation Biologist</cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>We are dedicated to preserving Earth's biodiversity through education, research, and action.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="#">Get Involved</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@biodiversityconservation.org</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Biodiversity Conservation Initiative. All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Project carousel functionality
+    const carousel = document.querySelector('.project-carousel');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    carousel.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
+    });
+
+    carousel.addEventListener('mouseleave', () => {
+        isDown = false;
+    });
+
+    carousel.addEventListener('mouseup', () => {
+        isDown = false;
+    });
+
+    carousel.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - carousel.offsetLeft;
+        const walk = (x - startX) * 2;
+        carousel.scrollLeft = scrollLeft - walk;
+    });
+
+    // Add animation to cards on scroll
+    const cards = document.querySelectorAll('.project-card, .project-item, .impact-item, .option, .testimonial');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.1 });
+
+    cards.forEach(card => {
+        card.style.opacity = 0;
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        observer.observe(card);
+    });
+
+    // Responsive navigation menu
+    const navToggle = document.createElement('button');
+    navToggle.classList.add('nav-toggle');
+    navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+    document.querySelector('nav').appendChild(navToggle);
+
+    navToggle.addEventListener('click', () => {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('show');
+    });
+});
+    </script>
+</body>
+</html>

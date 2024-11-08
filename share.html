@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Awareness - Biodiversity Conservation</title>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #2196F3;
+            --text-color: #333;
+            --background-color: #f4f4f4;
+            --header-height: 80px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            height: var(--header-height);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        main {
+            padding-top: var(--header-height);
+            min-height: calc(100vh - var(--header-height));
+        }
+
+        .hero {
+            background-image: url('https://source.unsplash.com/1600x900/?biodiversity,awareness');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .awareness-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .awareness-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .awareness-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .awareness-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .awareness-card i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .awareness-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .social-share {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 40px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .social-share h3 {
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .share-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .share-button i {
+            margin-right: 10px;
+        }
+
+        .share-button.facebook {
+            background-color: #3b5998;
+        }
+
+        .share-button.twitter {
+            background-color: #1da1f2;
+        }
+
+        .share-button.linkedin {
+            background-color: #0077b5;
+        }
+
+        .share-button:hover {
+            opacity: 0.9;
+        }
+
+        .resources-section {
+            padding: 60px 20px;
+            background-color: #fff;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .resource-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .resource-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .resource-card h4 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .resource-card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: var(--primary-color);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .resource-card a:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .awareness-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .share-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://img.freepik.com/free-vector/world-wildlife-conservation-day-poster-template_1308-120050.jpg" alt="Biodiversity Conservation Logo">
+                <h1>Biodiversity Conservation</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="threats.html">Threats</a></li>
+                <li><a href="conservation.html">Conservation</a></li>
+                <li><a href="action.html">Take Action</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Spread Awareness for Biodiversity</h2>
+                <p>Help us educate and inspire others to protect our planet's diverse ecosystems</p>
+            </div>
+        </section>
+
+        <section class="awareness-section">
+            <div class="awareness-grid">
+                <div class="awareness-card">
+                    <i class="fas fa-bullhorn"></i>
+                    <h3>Share on Social Media</h3>
+                    <p>Use your social platforms to spread the word about biodiversity conservation.</p>
+                </div>
+                <div class="awareness-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Organize Local Events</h3>
+                    <p>Host community gatherings to educate others about local biodiversity issues.</p>
+                </div>
+                <div class="awareness-card">
+                    <i class="fas fa-school"></i>
+                    <h3>Educational Outreach</h3>
+                    <p>Volunteer to give presentations at schools and community centers.</p>
+                </div>
+                <div class="awareness-card">
+                    <i class="fas fa-camera"></i>
+                    <h3>Document and Share</h3>
+                    <p>Capture and share photos of local flora and fauna to raise awareness.</p>
+                </div>
+            </div>
+
+            <div class="social-share">
+                <h3>Share This Page</h3>
+                <div class="share-buttons">
+                    <a href="#" class="share-button facebook">
+                        <i class="fab fa-facebook-f"></i> Share on Facebook
+                    </a>
+                    <a href="#" class="share-button twitter">
+                        <i class="fab fa-twitter"></i> Share on Twitter
+                    </a>
+                    <a href="#" class="share-button linkedin">
+                        <i class="fab fa-linkedin-in"></i> Share on LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="resources-section">
+            <h2 style="text-align: center; margin-bottom: 40px; color: var(--primary-color);">Educational Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <img src="https://source.unsplash.com/300x200/?infographic,biodiversity" alt="Biodiversity Infographic">
+                    <h4>Biodiversity Infographic</h4>
+                    <p>A visual guide to understanding biodiversity and its importance.</p>
+                    <a href="#">Download</a>
+                </div>
+                <div class="resource-card">
+                    <img src="https://source.unsplash.com/300x200/?presentation,nature" alt="Presentation Slides">
+                    <h4>Presentation Slides</h4>
+                    <p>Ready-to-use slides for educational presentations on conservation.</p>
+                    <a href="#">Download</a>
+                </div>
+                <div class="resource-card">
+                    <img src="https://source.unsplash.com/300x200/?ebook,environment" alt="E-book Cover">
+                    <h4>Conservation E-book</h4>
+                    <p>An in-depth guide to biodiversity conservation practices.</p>
+                    <a href="#">Download</a>
+                </div>
+                <div class="resource-card">
+                    <img src="https://source.unsplash.com/300x200/?video,wildlife" alt="Video Thumbnail">
+                    <h4>Educational Video Series</h4>
+                    <p>A collection of short videos explaining key biodiversity concepts.</p>
+                    <a href="#">Watch</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Biodiversity Conservation. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Social share functionality
+            const shareButtons = document.querySelectorAll('.share-button');
+            shareButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const network = this.classList[1];
+                    const url = encodeURIComponent(window.location.href);
+                    const text = encodeURIComponent('Check out this page on Biodiversity Conservation!');
+                    let shareUrl;
+
+                    switch(network) {
+                        case 'facebook':
+                            shareUrl = https//www.facebook.com/sharer/sharer.php?u=${url};
+                            break;
+                        case 'twitter':
+                            shareUrl = https//twitter.com/intent/tweet?url=${url}&text=${text};
+                            break;
+                        case 'linkedin':
+                            shareUrl = https//www.linkedin.com/shareArticle?mini=true&url=${url}&title=${text};
+                            break;
+                    }
+
+                    window.open(shareUrl, '_blank', 'width=600,height=400');
+                });
+            });
+
+            // Add animation to awareness cards on scroll
+            const cards = document.querySelectorAll('.awareness-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            cards.forEach(card => {
+                card.style.opacity = 0;
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
